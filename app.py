@@ -1,5 +1,8 @@
 import streamlit as st
 
+# This must be the first command in your app to avoid the StreamlitSetPageConfigMustBeFirstCommandError
+st.set_page_config(page_title="Your App Title", page_icon="🤖", layout="wide")
+
 # App title
 st.title("Welcome to My Streamlit App!")
 
@@ -13,9 +16,6 @@ if name:
 # Simple chart
 st.write("Here's a simple chart:")
 st.line_chart([1, 2, 3, 4, 5])
- 
-# Allow embedding in iframes
-st.set_page_config(page_title="Your App Title", page_icon="🤖", layout="wide")
 st.markdown(
     """
     <style>
